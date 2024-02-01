@@ -1,16 +1,67 @@
-# wear_me_flutter
+# Guide to Clone and Run Flutter
 
-A new Flutter project.
+## Clone the Project
 
-## Getting Started
+### 1. Copy Repository Link: Copy the GitHub link of the Flutter project.
 
-This project is a starting point for a Flutter application.
+### 2. Open Terminal: Navigate to your desired directory and open a terminal.
 
-A few resources to get you started if this is your first Flutter project:
+### 3. Run Clone Command: Execute the following command:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+```
+git clone https://github.com/hoanghp24/wear_me_flutter.git
+```
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Install Dependencies
+
+### 1. Navigate to Project Directory:
+
+```
+cd wear_me_flutter
+```
+
+### 2. Install Dependencies:
+
+```
+flutter pub get
+```
+
+## Run the Application
+
+### 1. Check Emulator or Connect Device: Ensure an emulator or device is ready.
+
+### 2. Run Flutter App:
+
+```
+flutter run
+```
+
+### 3. Verify the App: The Flutter app will install and run.
+
+Congratulations! You've successfully cloned and run the Flutter project.
+
+# --------------------------------------------------------
+
+# Guide to Rebase and Push to a New Branch
+
+If you have made code changes and want to bring your changes to a new branch while maintaining a clean commit history, you can use the rebase process. Here's a step-by-step guide:
+
+## 1. Switch to the Base Branch
+```
+git checkout develop
+```
+## 2. Pull the Latest Changes
+```
+git pull origin develop
+```
+## 3. Rebase
+```
+git rebase develop <new_your_branch>
+```
+## 4. Push to the New Branch
+```
+git push origin <new_your_branch>
+```
+Push your changes to the new branch on the repository.
+
+Congratulations! You have successfully rebased and pushed your changes to a new branch, maintaining a clean and organized commit history.
