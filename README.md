@@ -2,11 +2,11 @@
 
 ## Clone the Project
 
-### 1. Copy Repository Link: Copy the GitHub link of the Flutter project.
+#### 1. Copy Repository Link: Copy the GitHub link of the Flutter project.
 
-### 2. Open Terminal: Navigate to your desired directory and open a terminal.
+#### 2. Open Terminal: Navigate to your desired directory and open a terminal.
 
-### 3. Run Clone Command: Execute the following command:
+#### 3. Run Clone Command: Execute the following command:
 
 ```
 git clone https://github.com/hoanghp24/wear_me_flutter.git
@@ -14,13 +14,13 @@ git clone https://github.com/hoanghp24/wear_me_flutter.git
 
 ## Install Dependencies
 
-### 1. Navigate to Project Directory:
+#### 1. Navigate to Project Directory:
 
 ```
 cd wear_me_flutter
 ```
 
-### 2. Install Dependencies:
+#### 2. Install Dependencies:
 
 ```
 flutter pub get
@@ -28,15 +28,15 @@ flutter pub get
 
 ## Run the Application
 
-### 1. Check Emulator or Connect Device: Ensure an emulator or device is ready.
+#### 1. Check Emulator or Connect Device: Ensure an emulator or device is ready.
 
-### 2. Run Flutter App:
+#### 2. Run Flutter App:
 
 ```
 flutter run
 ```
 
-### 3. Verify the App: The Flutter app will install and run.
+#### 3. Verify the App: The Flutter app will install and run.
 
 Congratulations! You've successfully cloned and run the Flutter project.
 
@@ -46,19 +46,19 @@ Congratulations! You've successfully cloned and run the Flutter project.
 
 If you have made code changes and want to bring your changes to a new branch while maintaining a clean commit history, you can use the rebase process. Here's a step-by-step guide:
 
-## 1. Switch to the Base Branch
+#### 1. Switch to the Base Branch
 ```
 git checkout develop
 ```
-## 2. Pull the Latest Changes
+#### 2. Pull the Latest Changes
 ```
 git pull origin develop
 ```
-## 3. Rebase
+#### 3. Rebase
 ```
 git rebase develop <new_your_branch>
 ```
-## 4. Push to the New Branch
+#### 4. Push to the New Branch
 ```
 git push origin <new_your_branch>
 ```
