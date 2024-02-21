@@ -1,15 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:iconsax/iconsax.dart';
 import 'package:wear_me_flutter/features/authentication/controllers/onboarding/onboarding_controller.dart';
 import 'package:wear_me_flutter/features/authentication/screens/onboarding/widgets/onboarding_dot_navigation.dart';
 import 'package:wear_me_flutter/features/authentication/screens/onboarding/widgets/onboarding_next_button.dart';
 import 'package:wear_me_flutter/features/authentication/screens/onboarding/widgets/onboarding_page.dart';
 import 'package:wear_me_flutter/utils/constants/colors.dart';
 import 'package:wear_me_flutter/utils/constants/image_strings.dart';
-import 'package:wear_me_flutter/utils/constants/sizes.dart';
 import 'package:wear_me_flutter/utils/constants/text_strings.dart';
-import 'package:wear_me_flutter/utils/device/device_utility.dart';
 
 class OnBoardingScreeen extends StatelessWidget {
   const OnBoardingScreeen({super.key});
@@ -50,16 +47,6 @@ class OnBoardingScreeen extends StatelessWidget {
               ),
             ],
           ),
-
-          // //Back Button
-          // Positioned(
-          //     top: DeviceUtils.getAppBarHeight(),
-          //     left: SizesConst.defaultSpace,
-          //     child: ElevatedButton(
-          //       onPressed: () {},
-          //       style: ElevatedButton.styleFrom(shape: const CircleBorder(), backgroundColor: Colors.black),
-          //       child: const Icon(Iconsax.arrow_left_2),
-          //     )),
 
           //Dot Navigation
           const OnBoardingDotNavigation(),
