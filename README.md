@@ -25,6 +25,10 @@ cd wear_me_flutter
 ```
 flutter pub get
 ```
+then run the package flutter_laucher_icons:
+```
+flutter pub run flutter_launcher_icons
+```
 
 ## Run the Application
 
