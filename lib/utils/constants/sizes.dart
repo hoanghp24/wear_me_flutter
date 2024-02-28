@@ -1,5 +1,4 @@
-
-class SizesConst {
+class TSizes {
   //Padding and margin sizes
   static const double xs = 4.0;
   static const double sm = 8.0;
@@ -68,8 +67,10 @@ class SizesConst {
   //Grid view spacing
   static const double gridViewSpacing = 16.0;
 
-  //padding 
+  //padding
 
   static const double paddingHeight = 120.0;
 
+  //Icons
+  static const double sizeIcon = 50.0;
 }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:wear_me_flutter/features/authentication/controllers/login/login_controller.dart';
 import 'package:wear_me_flutter/features/authentication/screens/signup/signup.dart';
 import 'package:wear_me_flutter/utils/constants/sizes.dart';
 import 'package:wear_me_flutter/utils/constants/text_strings.dart';
@@ -17,8 +18,8 @@ class LoginFooter extends StatelessWidget {
   Widget build(BuildContext context) {
     return Positioned(
       bottom: DeviceUtils.getBottomNavigationBarHeight(),
-      left: SizesConst.defaultSpace,
-      right: SizesConst.defaultSpace,
+      left: TSizes.defaultSpace,
+      right: TSizes.defaultSpace,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -28,8 +29,12 @@ class LoginFooter extends StatelessWidget {
                   .bodyLarge
                   ?.copyWith(color: Colors.grey)),
           TextButton(
-              onPressed: ()=> Get.to(() => const SignUpScreen()),
-              child: Text(TextsConst.createAccount,
+              onPressed: () => Get.to(
+                    () => const SignUpScreen(),
+                    transition: Transition.rightToLeft,
+                    duration: const Duration(milliseconds: 300),
+                  ),
+              child: Text(TTexts.createAccount,
                   style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                         color: dark ? Colors.white : Colors.black,
                       ))),

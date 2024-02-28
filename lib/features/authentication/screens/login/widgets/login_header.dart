@@ -1,7 +1,4 @@
-
-
 import 'package:flutter/material.dart';
-import 'package:wear_me_flutter/utils/constants/colors.dart';
 import 'package:wear_me_flutter/utils/constants/sizes.dart';
 import 'package:wear_me_flutter/utils/constants/text_strings.dart';
 
@@ -15,17 +12,14 @@ class LoginHeader extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        const SizedBox(height: SizesConst.lg),
+        const SizedBox(height: TSizes.lg),
         Text(
-          TextsConst.loginTitle,
-          style: Theme.of(context)
-              .textTheme
-              .headlineLarge
-              ?.copyWith(color: ColorsConst.primary),
+          TTexts.loginTitle,
+          style: Theme.of(context).textTheme.headlineLarge,
         ),
-        const SizedBox(height: SizesConst.sm),
-        Text(TextsConst.loginSubTitle,
-            style: Theme.of(context).textTheme.bodyLarge),
+        const SizedBox(height: TSizes.sm),
+        Text(TTexts.loginSubTitle,
+            style: Theme.of(context).textTheme.titleSmall),
       ],
     );
   }

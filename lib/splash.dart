@@ -22,9 +22,9 @@ class SplashScreen extends StatelessWidget {
     return Scaffold(
       body: Container(
         decoration: const BoxDecoration(
-          gradient: ColorsConst.linearGradient,
+          gradient: TColors.linearGradient,
           image: DecorationImage(
-            image: AssetImage(ImagesConst.splashAppLogo),
+            image: AssetImage(TImages.splashAppLogo),
             fit: BoxFit.contain,
           ),
         ),

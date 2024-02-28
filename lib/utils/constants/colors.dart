@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class ColorsConst {
-  ColorsConst._();
+class TColors {
+  TColors._();
 
   //App Basic Colors
   static const Color primary = Color(0xFF48B2E7);
@@ -10,8 +10,8 @@ class ColorsConst {
 
   //Gradient Colors
   static const Gradient linearGradient = LinearGradient(
-    begin: Alignment.topCenter, 
-    end: Alignment.bottomCenter, 
+    begin: Alignment.topCenter,
+    end: Alignment.bottomCenter,
     colors: [
       Color(0xFF48B2E7),
       Color(0xFF0076B1),
