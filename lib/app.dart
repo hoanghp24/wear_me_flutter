@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:wear_me_flutter/features/authentication/screens/login/login.dart';
+import 'package:wear_me_flutter/features/authentication/screens/signup/signup.dart';
+import 'package:wear_me_flutter/navigation_menu.dart';
 import 'package:wear_me_flutter/splash.dart';
 import 'package:wear_me_flutter/utils/theme/theme.dart';
 
@@ -13,7 +16,7 @@ class App extends StatelessWidget {
       themeMode: ThemeMode.system,
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
-      home: const SplashScreen(),
+      home: NavigationMenu(),
     );
   }
 }

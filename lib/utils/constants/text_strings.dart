@@ -1,8 +1,8 @@
-class TextsConst {
+class TTexts {
   //GLOBAL Texts
-  static const String submit = "Submit";
+  static const String submit = "Xác nhận";
   static const String appName = "Wear Me";
-  static const String tContinue = "Continue";
+  static const String tContinue = "Tiếp tục";
 
   //Home
   static const String homeAppbarTitle = "Good day for shopping";
@@ -20,9 +20,9 @@ class TextsConst {
   static const String onBoardingSubTitle3 =
       "Dịch vụ giao hàng tận nơi - Nâng tầm trải nghiệm mua sắm của bạn với sự chuyên nghiệp và hiệu quả";
 
-  static const String onBoardingButton1 = "Bắt Đầu";
-  static const String onBoardingButton2 = "Tiếp Theo";
-  static const String onBoardingButton3 = "Đăng Nhập Ngay Bây Giờ";
+  static const String onBoardingButton1 = "Bắt đầu";
+  static const String onBoardingButton2 = "Tiếp theo";
+  static const String onBoardingButton3 = "Đăng nhập ngay bây giờ";
 
   // Authentication Form Text
   static const String firstName = "Tên";
@@ -34,17 +34,19 @@ class TextsConst {
   static const String phoneNo = "Số điện thoại";
   static const String rememberMe = "Nhớ mật khẩu";
   static const String forgotPassword = "Quên mật khẩu?";
-  static const String signIn = "Đăng Nhập";
+  static const String retrievePassword = "Lấy lại mật khẩu";
+  static const String signIn = "Đăng nhập";
   static const String createAccount = "Tạo tài khoản";
   static const String orSignInWith = "hoặc đăng nhập bằng";
   static const String orSignUpWith = "or sign up with";
-  static const String iAgreeTo = "I agree to";
-  static const String privacyPolicy = "Privacy Policy";
-  static const String termsOfUse = "Terms of use";
+  static const String iAgreeTo = "Tôi đồng ý với";
+  static const String policyAndTerms =
+      "Chính sách bảo mật và điều khoản sử dụng";
   static const String verificationCode = "verificationCode";
-  static const String resendEmail = "Resend Email";
+  static const String resendEmail = "Gửi lại email";
   static const String resendEmailIn = "Resend email in";
-  static const String signInGoogle = "Đăng Nhập Với Google";
+  static const String signInGoogle = "Đăng nhập với Google";
+  static const String signUpGoogle = "Đăng ký với Google";
 
   // Authentication Heading Texts
 
@@ -52,19 +54,20 @@ class TextsConst {
   static const String loginSubTitle = "Khám phá xu hướng mới cùng Wear Me";
   static const String signupTitle = "Đăng Ký Tài Khoản";
   static const String signupSubTitle = "Đăng ký để trải nghiệm thả ga mua sắm";
-  static const String forgetPasswordTitle = "Khôi Phục Mật Khẩu";
+  static const String forgetPasswordTitle = "Xác thực email đã đăng ký";
   static const String forgetPasswordSubtitle =
-      "Hãy nhập email của bạn và chúng tôi sẽ gửi cho bạn liên kết đặt lại mật khẩu";
-  static const String changeYourPasswordTitle = "Password reset email sent";
+      "Vui lòng nhập email mà bạn đã cung cấp cho WearMe để xác thực thông tin";
+
+  static const String changeYourPasswordTitle = "Đã gửi email đặt lại mật khẩu";
   static const String changeYourPasswordSubtitle =
-      "Your account security is our priority! We've sent you a secure link to safely change your password and keep your account protected";
-  static const String confirmEmailTitle = "Verify your email address";
+      "Bảo mật tài khoản của bạn là ưu tiên hàng đầu của chúng tôi! Chúng tôi đã gửi cho bạn một liên kết an toàn để thay đổi mật khẩu và bảo vệ tài khoản của bạn";
+  static const String confirmEmailTitle = "Kiểm tra email";
   static const String confirmEmailSubtitle =
-      "Congratulations! Your account awaits: Verify your email to start shopping and experience a world of unrivaled deals and personalized offers";
+      "Email xác nhận tài khoản đã được gửi đến địa chỉ gmail của bạn.";
   static const String emailNotReceivedMessage =
-      "Didn't get the email? Check your junk/spam or resend it";
+      "Không nhận được email? Kiểm tra hộp thư rác/spam của bạn hoặc gửi lại";
   static const String yourAccountCreatedTitle =
-      "Your account successfully created";
+      "Tài khoản của bạn đã được tạo thành công";
   static const String yourAccountCreatedSubtitle =
-      "Welcome to your intimate shopping destination: Your account is created, unleash the joy of seamless online shopping";
+      "Chào mừng bạn đến với điểm đến mua sắm thân mật của bạn: Tài khoản của bạn đã được tạo, hãy trải nghiệm niềm vui của việc mua sắm trực tuyến một cách dễ dàng";
 }

@@ -21,7 +21,7 @@ class OnBoardingScreeen extends StatelessWidget {
           /// Gradient Background
           Container(
             decoration: const BoxDecoration(
-              gradient: ColorsConst.linearGradient,
+              gradient: TColors.linearGradient,
             ),
           ),
 
@@ -31,19 +31,19 @@ class OnBoardingScreeen extends StatelessWidget {
             onPageChanged: controller.updatePageIndicator,
             children: const [
               OnBoardingPage(
-                image: ImagesConst.onboarding1,
-                title: TextsConst.onBoardingTitle1,
-                subtitle: TextsConst.onBoardingSubTitle1,
+                image: TImages.onboarding1,
+                title: TTexts.onBoardingTitle1,
+                subtitle: TTexts.onBoardingSubTitle1,
               ),
               OnBoardingPage(
-                image: ImagesConst.onboarding2,
-                title: TextsConst.onBoardingTitle2,
-                subtitle: TextsConst.onBoardingSubTitle2,
+                image: TImages.onboarding2,
+                title: TTexts.onBoardingTitle2,
+                subtitle: TTexts.onBoardingSubTitle2,
               ),
               OnBoardingPage(
-                image: ImagesConst.onboarding3,
-                title: TextsConst.onBoardingTitle3,
-                subtitle: TextsConst.onBoardingSubTitle3,
+                image: TImages.onboarding3,
+                title: TTexts.onBoardingTitle3,
+                subtitle: TTexts.onBoardingSubTitle3,
               ),
             ],
           ),

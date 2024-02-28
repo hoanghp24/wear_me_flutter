@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:wear_me_flutter/features/authentication/screens/password_configuration/forget_password.dart';
+import 'package:wear_me_flutter/navigation_menu.dart';
 import 'package:wear_me_flutter/utils/constants/colors.dart';
 import 'package:wear_me_flutter/utils/constants/image_strings.dart';
 import 'package:wear_me_flutter/utils/constants/sizes.dart';
@@ -17,27 +20,27 @@ class LoginForm extends StatelessWidget {
   Widget build(BuildContext context) {
     return Form(
       child: Padding(
-        padding: const EdgeInsets.symmetric(
-            vertical: SizesConst.spaceBetweenSections),
+        padding:
+            const EdgeInsets.symmetric(vertical: TSizes.spaceBetweenSections),
         child: Column(
           children: [
             //Email
             TextFormField(
               decoration: const InputDecoration(
-                labelText: TextsConst.email,
+                labelText: TTexts.email,
                 labelStyle: TextStyle(color: Colors.grey),
               ),
             ),
-            const SizedBox(height: SizesConst.spaceBetweenInputFields),
+            const SizedBox(height: TSizes.spaceBetweenInputFields),
 
             //Password
             TextFormField(
               decoration: const InputDecoration(
-                  labelText: TextsConst.password,
+                  labelText: TTexts.password,
                   labelStyle: TextStyle(color: Colors.grey),
                   suffixIcon: Icon(Iconsax.eye_slash)),
             ),
-            const SizedBox(height: SizesConst.spaceBetweenInputFields / 2),
+            const SizedBox(height: TSizes.spaceBetweenInputFields / 2),
 
             //Remember & Forget Password
             Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
@@ -45,56 +48,54 @@ class LoginForm extends StatelessWidget {
               Row(
                 children: [
                   Checkbox(value: true, onChanged: (value) {}),
-                  const Text(TextsConst.rememberMe),
+                  const Text(TTexts.rememberMe),
                 ],
               ),
               //Forget Password
               TextButton(
-                  onPressed: () {},
+                  onPressed: () => Get.to(
+                        () => ForgetPassword(),
+                        transition: Transition.rightToLeft,
+                        duration: const Duration(milliseconds: 300),
+                      ),
                   child: Text(
-                    TextsConst.forgotPassword,
+                    TTexts.forgotPassword,
                     style: TextStyle(
                         fontSize: 14,
                         color: dark ? Colors.white : Colors.black),
                   )),
             ]),
-            const SizedBox(height: SizesConst.spaceBetweenSections),
+            const SizedBox(height: TSizes.spaceBetweenSections),
 
             //Sigin Button
             SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () => Get.to(() => NavigationMenu()),
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: ColorsConst.primary,
-                      minimumSize: const Size.fromHeight(55),
-                      padding: const EdgeInsets.symmetric(vertical: 16.0),
+                      backgroundColor: TColors.primary,
                     ),
-                    child: Text(TextsConst.signIn,
+                    child: Text(TTexts.signIn,
                         style: Theme.of(context)
                             .textTheme
                             .bodyLarge
                             ?.copyWith(color: Colors.white)))),
-            const SizedBox(height: SizesConst.spaceBetweenItems),
+            const SizedBox(height: TSizes.spaceBetweenItems),
 
             SizedBox(
               width: double.infinity,
               child: OutlinedButton(
                 onPressed: () {},
-                style: OutlinedButton.styleFrom(
-                  minimumSize: const Size.fromHeight(55),
-                  padding: const EdgeInsets.symmetric(vertical: 16.0),
-                ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Image.asset(
-                      ImagesConst.googleLogo,
+                      TImages.googleLogo,
                       height: 24,
                     ),
                     const SizedBox(width: 10),
                     Text(
-                      TextsConst.signInGoogle,
+                      TTexts.signInGoogle,
                       style: Theme.of(context).textTheme.bodyLarge,
                     ),
                   ],

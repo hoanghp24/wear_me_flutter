@@ -22,7 +22,7 @@ class LoginScreen extends StatelessWidget {
               //Logo and title
               const LoginHeader(),
 
-              const SizedBox(height: SizesConst.spaceBetweenSections),
+              const SizedBox(height: TSizes.sm),
 
               /// Form
               LoginForm(dark: dark),

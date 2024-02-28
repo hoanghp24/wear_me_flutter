@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 
-
-class BottomSheetThemeCustom {
-  BottomSheetThemeCustom._();
+class TBottomSheetTheme {
+  TBottomSheetTheme._();
 
   // Light Theme
   static BottomSheetThemeData lightBottomSheetTheme = BottomSheetThemeData(
@@ -21,5 +20,4 @@ class BottomSheetThemeCustom {
     constraints: const BoxConstraints(minWidth: double.infinity),
     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
   );
-
 }

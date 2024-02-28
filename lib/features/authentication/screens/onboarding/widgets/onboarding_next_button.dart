@@ -14,14 +14,12 @@ class OnBoardingNextButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Positioned(
         bottom: DeviceUtils.getBottomNavigationBarHeight(),
-        left: SizesConst.defaultSpace,
-        right: SizesConst.defaultSpace,
+        left: TSizes.defaultSpace,
+        right: TSizes.defaultSpace,
         child: ElevatedButton(
           onPressed: () => OnBoardingController.instance.nextPage(),
           style: ElevatedButton.styleFrom(
             backgroundColor: Colors.white,
-            minimumSize: const Size.fromHeight(55),
-            padding: const EdgeInsets.symmetric(vertical: 16.0),
           ),
           child: Obx(
             () {
@@ -29,11 +27,11 @@ class OnBoardingNextButton extends StatelessWidget {
                   OnBoardingController.instance.currentPageIndex.value;
               String buttonText = '';
               if (currentPage == 0) {
-                buttonText = TextsConst.onBoardingButton1;
+                buttonText = TTexts.onBoardingButton1;
               } else if (currentPage == 1) {
-                buttonText = TextsConst.onBoardingButton2;
+                buttonText = TTexts.onBoardingButton2;
               } else if (currentPage == 2) {
-                buttonText = TextsConst.onBoardingButton3;
+                buttonText = TTexts.onBoardingButton3;
               }
               return Text(
                 buttonText,
