@@ -26,17 +26,17 @@ class OnBoardingPage extends StatelessWidget {
             title,
             style: Theme.of(context)
                 .textTheme
-                .headlineMedium
-                ?.copyWith(color: Colors.white),
+                .headlineMedium!
+                .apply(color: Colors.white),
             textAlign: TextAlign.center,
           ),
-          const SizedBox(height: TSizes.spaceBetweenItems),
+          const SizedBox(height: TSizes.spaceBtwItems),
           Text(
             subtitle,
             style: Theme.of(context)
                 .textTheme
-                .bodyMedium
-                ?.copyWith(color: Colors.white),
+                .bodyMedium!
+                .apply(color: Colors.white),
             textAlign: TextAlign.center,
           ),
         ],

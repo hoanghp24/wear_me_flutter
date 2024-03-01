@@ -20,8 +20,7 @@ class LoginForm extends StatelessWidget {
   Widget build(BuildContext context) {
     return Form(
       child: Padding(
-        padding:
-            const EdgeInsets.symmetric(vertical: TSizes.spaceBetweenSections),
+        padding: const EdgeInsets.symmetric(vertical: TSizes.spaceBtwSections),
         child: Column(
           children: [
             //Email
@@ -65,22 +64,22 @@ class LoginForm extends StatelessWidget {
                         color: dark ? Colors.white : Colors.black),
                   )),
             ]),
-            const SizedBox(height: TSizes.spaceBetweenSections),
+            const SizedBox(height: TSizes.spaceBtwSections),
 
             //Sigin Button
             SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
-                    onPressed: () => Get.to(() => NavigationMenu()),
+                    onPressed: () => Get.to(() => const NavigationMenu()),
                     style: ElevatedButton.styleFrom(
                       backgroundColor: TColors.primary,
                     ),
                     child: Text(TTexts.signIn,
                         style: Theme.of(context)
                             .textTheme
-                            .bodyLarge
-                            ?.copyWith(color: Colors.white)))),
-            const SizedBox(height: TSizes.spaceBetweenItems),
+                            .bodyLarge!
+                            .apply(color: Colors.white)))),
+            const SizedBox(height: TSizes.spaceBtwItems),
 
             SizedBox(
               width: double.infinity,

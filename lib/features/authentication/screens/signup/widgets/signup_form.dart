@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:wear_me_flutter/common/widgets/confirm_email.dart';
+import 'package:wear_me_flutter/common/widgets/authentications/confirm_email.dart';
 import 'package:wear_me_flutter/features/authentication/screens/signup/widgets/term_checkbox.dart';
 import 'package:wear_me_flutter/utils/constants/colors.dart';
 import 'package:wear_me_flutter/utils/constants/sizes.dart';
@@ -77,11 +77,11 @@ class SignUpForm extends StatelessWidget {
                 suffixIcon: Icon(Iconsax.eye_slash)),
           ),
 
-          const SizedBox(height: TSizes.spaceBetweenSections),
+          const SizedBox(height: TSizes.spaceBtwSections),
 
           ///Term & Conditions
           TermCheckbox(dark: dark),
-          const SizedBox(height: TSizes.spaceBetweenSections),
+          const SizedBox(height: TSizes.spaceBtwSections),
 
           //Sigin Button
           SizedBox(
@@ -99,8 +99,8 @@ class SignUpForm extends StatelessWidget {
                   child: Text(TTexts.createAccount,
                       style: Theme.of(context)
                           .textTheme
-                          .bodyLarge
-                          ?.copyWith(color: Colors.white)))),
+                          .bodyLarge!
+                          .apply(color: Colors.white)))),
         ],
       ),
     );

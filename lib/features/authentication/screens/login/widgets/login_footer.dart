@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:wear_me_flutter/features/authentication/controllers/login/login_controller.dart';
 import 'package:wear_me_flutter/features/authentication/screens/signup/signup.dart';
 import 'package:wear_me_flutter/utils/constants/sizes.dart';
 import 'package:wear_me_flutter/utils/constants/text_strings.dart';
@@ -17,7 +16,7 @@ class LoginFooter extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Positioned(
-      bottom: DeviceUtils.getBottomNavigationBarHeight(),
+      bottom: TDeviceUtils.getBottomNavigationBarHeight(),
       left: TSizes.defaultSpace,
       right: TSizes.defaultSpace,
       child: Row(
@@ -26,8 +25,8 @@ class LoginFooter extends StatelessWidget {
           Text("Bạn chưa có tài khoản?",
               style: Theme.of(context)
                   .textTheme
-                  .bodyLarge
-                  ?.copyWith(color: Colors.grey)),
+                  .bodyLarge!
+                  .apply(color: Colors.grey)),
           TextButton(
               onPressed: () => Get.to(
                     () => const SignUpScreen(),
@@ -35,7 +34,7 @@ class LoginFooter extends StatelessWidget {
                     duration: const Duration(milliseconds: 300),
                   ),
               child: Text(TTexts.createAccount,
-                  style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                  style: Theme.of(context).textTheme.bodyLarge!.apply(
                         color: dark ? Colors.white : Colors.black,
                       ))),
         ],
