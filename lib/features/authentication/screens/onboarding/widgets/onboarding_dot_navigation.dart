@@ -13,7 +13,7 @@ class OnBoardingDotNavigation extends StatelessWidget {
   Widget build(BuildContext context) {
     final controller = OnBoardingController.instance;
     return Positioned(
-        bottom: DeviceUtils.getBottomNavigationBarHeight() + 100,
+        bottom: TDeviceUtils.getBottomNavigationBarHeight() + 100,
         left: 0,
         right: 0,
         child: Center(

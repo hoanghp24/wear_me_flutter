@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:wear_me_flutter/common/widgets/confirm_email.dart';
 import 'package:wear_me_flutter/utils/constants/colors.dart';
 import 'package:wear_me_flutter/utils/constants/sizes.dart';
 import 'package:wear_me_flutter/utils/constants/text_strings.dart';
@@ -30,11 +28,11 @@ class ResetPassword extends StatelessWidget {
               TTexts.forgetPasswordTitle,
               style: Theme.of(context)
                   .textTheme
-                  .headlineLarge
-                  ?.copyWith(color: TColors.primary),
+                  .headlineLarge!
+                  .apply(color: TColors.primary),
             ),
             const SizedBox(
-              height: TSizes.spaceBetweenItems,
+              height: TSizes.spaceBtwItems,
             ),
             Text(
               TTexts.forgetPasswordSubtitle,
@@ -42,7 +40,7 @@ class ResetPassword extends StatelessWidget {
               textAlign: TextAlign.center,
             ),
             const SizedBox(
-              height: TSizes.spaceBetweenSections,
+              height: TSizes.spaceBtwSections,
             ),
 
             ///Text Form
@@ -53,7 +51,7 @@ class ResetPassword extends StatelessWidget {
                   labelStyle: TextStyle(color: Colors.grey)),
             ),
             const SizedBox(
-              height: TSizes.spaceBetweenSections,
+              height: TSizes.spaceBtwSections,
             ),
 
             ///Button
@@ -67,8 +65,8 @@ class ResetPassword extends StatelessWidget {
                     child: Text(TTexts.submit,
                         style: Theme.of(context)
                             .textTheme
-                            .bodyLarge
-                            ?.copyWith(color: Colors.white)))),
+                            .bodyLarge!
+                            .apply(color: Colors.white)))),
           ],
         ),
       ),

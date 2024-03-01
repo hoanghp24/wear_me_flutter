@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:wear_me_flutter/common/widgets/appbar/back_icon.dart';
 import 'package:wear_me_flutter/features/authentication/screens/signup/widgets/signup_form.dart';
-import 'package:wear_me_flutter/utils/constants/colors.dart';
 import 'package:wear_me_flutter/utils/constants/sizes.dart';
 import 'package:wear_me_flutter/utils/constants/text_strings.dart';
 import 'package:wear_me_flutter/utils/helpers/helper_functions.dart';
@@ -13,9 +13,7 @@ class SignUpScreen extends StatelessWidget {
     final dark = HelperFunctions.isDarkMode(context);
     return Scaffold(
       appBar: AppBar(
-        iconTheme: IconThemeData(
-          color: dark ? Colors.white : Colors.black,
-        ),
+        leading: BackIconAppBar(dark: dark),
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -28,7 +26,7 @@ class SignUpScreen extends StatelessWidget {
               const SizedBox(height: TSizes.sm),
               Text(TTexts.signupSubTitle,
                   style: Theme.of(context).textTheme.titleSmall),
-              const SizedBox(height: TSizes.spaceBetweenSections),
+              const SizedBox(height: TSizes.spaceBtwSections),
 
               /// Form
               SignUpForm(dark: dark)

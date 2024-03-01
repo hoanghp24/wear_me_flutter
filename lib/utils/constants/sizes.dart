@@ -31,8 +31,8 @@ class TSizes {
 
   //Default spacing between sections
   static const double defaultSpace = 24.0;
-  static const double spaceBetweenItems = 16.0;
-  static const double spaceBetweenSections = 32.0;
+  static const double spaceBtwItems = 16.0;
+  static const double spaceBtwSections = 32.0;
 
   //Border Radius
   static const double borderRadiusSm = 4.0;
@@ -52,7 +52,7 @@ class TSizes {
   static const double spaceBetweenInputFields = 16.0;
 
   //Card sizes
-  static const double cardRadiusLg = 16.0;
+  static const double cardRadiusLg = 18.0;
   static const double cardRadiusMd = 12.0;
   static const double cardRadiusSm = 10.0;
   static const double cardRadiusXs = 6.0;

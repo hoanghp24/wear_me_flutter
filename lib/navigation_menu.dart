@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:wear_me_flutter/features/shop/screens/home/home.dart';
 import 'package:wear_me_flutter/utils/constants/colors.dart';
+import 'package:wear_me_flutter/utils/constants/image_strings.dart';
 import 'package:wear_me_flutter/utils/helpers/helper_functions.dart';
 
 class NavigationMenu extends StatelessWidget {
@@ -14,9 +16,8 @@ class NavigationMenu extends StatelessWidget {
     return Scaffold(
       bottomNavigationBar: Obx(() => BottomNavigationBar(
             type: BottomNavigationBarType.fixed,
-            unselectedItemColor: dark
-                ? Colors.white.withOpacity(0.6)
-                : Colors.black.withOpacity(0.8),
+            unselectedItemColor:
+                dark ? Colors.white.withOpacity(0.6) : Colors.black,
             selectedItemColor: TColors.primary,
             backgroundColor: dark ? Colors.black : Colors.white,
             currentIndex: controller.selectedIndex.value,
@@ -35,8 +36,11 @@ class NavigationMenu extends StatelessWidget {
                   activeIcon: Icon(Iconsax.heart5),
                   label: 'Yêu thích'),
               BottomNavigationBarItem(
-                  icon: Icon(Iconsax.profile_2user),
-                  activeIcon: Icon(Iconsax.profile_2user5),
+                  icon: Icon(Iconsax.user),
+                  activeIcon: Image(
+                      image: AssetImage(TImages.user),
+                      height: 24,
+                      color: TColors.primary),
                   label: 'Hồ sơ')
             ],
           )),
@@ -49,7 +53,7 @@ class NavigationController extends GetxController {
   final Rx<int> selectedIndex = 0.obs;
 
   final screens = [
-    const Text('Trang chủ'),
+    const HomeScreen(),
     const Text('Cửa hàng'),
     const Text('Yêu thích'),
     const Text('Hồ sơ'),

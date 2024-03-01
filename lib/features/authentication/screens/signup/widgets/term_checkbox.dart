@@ -23,7 +23,7 @@ class TermCheckbox extends StatelessWidget {
             onChanged: (value) {},
           ),
         ),
-        const SizedBox(width: TSizes.spaceBetweenItems),
+        const SizedBox(width: TSizes.spaceBtwItems),
         Expanded(
           child: Text.rich(TextSpan(children: [
             TextSpan(

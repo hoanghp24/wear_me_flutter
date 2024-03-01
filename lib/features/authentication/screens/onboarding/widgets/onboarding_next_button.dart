@@ -13,7 +13,7 @@ class OnBoardingNextButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Positioned(
-        bottom: DeviceUtils.getBottomNavigationBarHeight(),
+        bottom: TDeviceUtils.getBottomNavigationBarHeight(),
         left: TSizes.defaultSpace,
         right: TSizes.defaultSpace,
         child: ElevatedButton(
@@ -37,8 +37,8 @@ class OnBoardingNextButton extends StatelessWidget {
                 buttonText,
                 style: Theme.of(context)
                     .textTheme
-                    .bodyLarge
-                    ?.copyWith(color: Colors.black),
+                    .bodyLarge!
+                    .apply(color: Colors.black),
               );
             },
           ),

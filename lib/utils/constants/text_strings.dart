@@ -5,7 +5,7 @@ class TTexts {
   static const String tContinue = "Tiếp tục";
 
   //Home
-  static const String homeAppbarTitle = "Good day for shopping";
+  static const String homeAppbarTitle = "Xin chào, ";
   static const String homeAppbarSubTitle = "Taimoor Sikander";
 
   //Onboarding
