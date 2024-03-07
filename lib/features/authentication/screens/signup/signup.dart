@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:wear_me_flutter/common/widgets/appbar/back_icon.dart';
+import 'package:wear_me_flutter/common/widgets/appbar/appbar.dart';
 import 'package:wear_me_flutter/features/authentication/screens/signup/widgets/signup_form.dart';
 import 'package:wear_me_flutter/utils/constants/sizes.dart';
 import 'package:wear_me_flutter/utils/constants/text_strings.dart';
@@ -12,8 +12,8 @@ class SignUpScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final dark = HelperFunctions.isDarkMode(context);
     return Scaffold(
-      appBar: AppBar(
-        leading: BackIconAppBar(dark: dark),
+      appBar: const TAppBar(
+        showBackArrow: true,
       ),
       body: SingleChildScrollView(
         child: Padding(

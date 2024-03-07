@@ -5,11 +5,11 @@ import 'package:device_preview/device_preview.dart';
 
 //Enable this function when running using the web
 void main() => runApp(
-  DevicePreview(
-    enabled: !kReleaseMode,
-    builder: (context) => const App(), // Wrap your app
-  ),
-);
+      DevicePreview(
+        enabled: !kReleaseMode,
+        builder: (context) => const App(),
+      ),
+    );
 
 //Enable this function when running on an emulator or real device
 // void main() {

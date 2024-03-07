@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:wear_me_flutter/common/widgets/image_texts/vertical_image_texts.dart';
+import 'package:wear_me_flutter/utils/constants/colors.dart';
 import 'package:wear_me_flutter/utils/constants/image_strings.dart';
 
 class HomeCategories extends StatelessWidget {
@@ -17,8 +18,9 @@ class HomeCategories extends StatelessWidget {
           scrollDirection: Axis.horizontal,
           itemBuilder: (_, index) {
             return VerticalImageText(
-              image: TImages.shirtIcons,
+              image: TImages.product2,
               title: 'Áo thun nam',
+              textColor: TColors.black,
               onTap: () {},
             );
           }),

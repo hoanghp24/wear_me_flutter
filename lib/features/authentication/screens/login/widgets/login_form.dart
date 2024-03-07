@@ -3,8 +3,6 @@ import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:wear_me_flutter/features/authentication/screens/password_configuration/forget_password.dart';
 import 'package:wear_me_flutter/navigation_menu.dart';
-import 'package:wear_me_flutter/utils/constants/colors.dart';
-import 'package:wear_me_flutter/utils/constants/image_strings.dart';
 import 'package:wear_me_flutter/utils/constants/sizes.dart';
 import 'package:wear_me_flutter/utils/constants/text_strings.dart';
 
@@ -25,10 +23,7 @@ class LoginForm extends StatelessWidget {
           children: [
             //Email
             TextFormField(
-              decoration: const InputDecoration(
-                labelText: TTexts.email,
-                labelStyle: TextStyle(color: Colors.grey),
-              ),
+              decoration: const InputDecoration(labelText: TTexts.email),
             ),
             const SizedBox(height: TSizes.spaceBetweenInputFields),
 
@@ -36,7 +31,6 @@ class LoginForm extends StatelessWidget {
             TextFormField(
               decoration: const InputDecoration(
                   labelText: TTexts.password,
-                  labelStyle: TextStyle(color: Colors.grey),
                   suffixIcon: Icon(Iconsax.eye_slash)),
             ),
             const SizedBox(height: TSizes.spaceBetweenInputFields / 2),
@@ -68,39 +62,12 @@ class LoginForm extends StatelessWidget {
 
             //Sigin Button
             SizedBox(
-                width: double.infinity,
-                child: ElevatedButton(
-                    onPressed: () => Get.to(() => const NavigationMenu()),
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: TColors.primary,
-                    ),
-                    child: Text(TTexts.signIn,
-                        style: Theme.of(context)
-                            .textTheme
-                            .bodyLarge!
-                            .apply(color: Colors.white)))),
-            const SizedBox(height: TSizes.spaceBtwItems),
-
-            SizedBox(
               width: double.infinity,
-              child: OutlinedButton(
-                onPressed: () {},
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Image.asset(
-                      TImages.googleLogo,
-                      height: 24,
-                    ),
-                    const SizedBox(width: 10),
-                    Text(
-                      TTexts.signInGoogle,
-                      style: Theme.of(context).textTheme.bodyLarge,
-                    ),
-                  ],
-                ),
+              child: ElevatedButton(
+                onPressed: () => Get.to(() => const NavigationMenu()),
+                child: const Text(TTexts.signIn),
               ),
-            )
+            ),
           ],
         ),
       ),
