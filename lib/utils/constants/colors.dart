@@ -18,6 +18,15 @@ class TColors {
     ],
   );
 
+  static Gradient backgroundGradient = LinearGradient(
+    begin: Alignment.centerLeft,
+    end: Alignment.centerRight,
+    colors: [
+      const Color(0xFF0076B1),
+      const Color(0xFF48B2E7).withOpacity(0.5),
+    ],
+  );
+
   //Text Colors
   static const Color textPrimary = Color(0xFF333333);
   static const Color textSercondary = Color(0xFF6C757D);

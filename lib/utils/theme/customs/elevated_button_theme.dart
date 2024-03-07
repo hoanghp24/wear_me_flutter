@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:wear_me_flutter/utils/constants/colors.dart';
+import 'package:wear_me_flutter/utils/constants/sizes.dart';
 
 class TElevatedButtonTheme {
   TElevatedButtonTheme._();
@@ -7,29 +9,27 @@ class TElevatedButtonTheme {
   static final lightElevatedButtonTheme = ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
           elevation: 0,
-          foregroundColor: Colors.white,
-          backgroundColor: Colors.blue,
+          foregroundColor: TColors.white,
+          backgroundColor: TColors.primary,
           disabledForegroundColor: Colors.grey,
           disabledBackgroundColor: Colors.grey,
-          side: const BorderSide(color: Colors.blue),
-          padding: const EdgeInsets.symmetric(vertical: 18),
+          padding: const EdgeInsets.symmetric(vertical: 23),
           textStyle: const TextStyle(
-              fontSize: 16, color: Colors.white, fontWeight: FontWeight.w600),
-          shape:
-              RoundedRectangleBorder(borderRadius: BorderRadius.circular(12))));
+              fontSize: 18, color: Colors.white, fontWeight: FontWeight.w500),
+          shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(TSizes.md))));
 
   // Light Theme
   static final darkElevatedButtonTheme = ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
           elevation: 0,
-          foregroundColor: Colors.white,
-          backgroundColor: Colors.blue,
+          foregroundColor: TColors.white,
+          backgroundColor: TColors.primary,
           disabledForegroundColor: Colors.grey,
           disabledBackgroundColor: Colors.grey,
-          side: const BorderSide(color: Colors.blue),
-          padding: const EdgeInsets.symmetric(vertical: 18),
+          padding: const EdgeInsets.symmetric(vertical: 23),
           textStyle: const TextStyle(
-              fontSize: 16, color: Colors.white, fontWeight: FontWeight.w600),
-          shape:
-              RoundedRectangleBorder(borderRadius: BorderRadius.circular(12))));
+              fontSize: 18, color: Colors.white, fontWeight: FontWeight.w500),
+          shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(TSizes.md))));
 }

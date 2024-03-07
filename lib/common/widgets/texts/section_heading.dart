@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:iconsax/iconsax.dart';
 import 'package:wear_me_flutter/utils/constants/colors.dart';
 
 class SectionHeading extends StatelessWidget {
   const SectionHeading({
     super.key,
-    this.textColor = TColors.white,
+    this.textColor = TColors.black,
     this.showActionButotn = true,
     required this.title,
     this.buttonTitle = 'Xem thêm',
@@ -19,8 +20,9 @@ class SectionHeading extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Text('Danh mục sản phẩm',
+        Text(title,
             style: Theme.of(context)
                 .textTheme
                 .headlineSmall!
@@ -28,7 +30,21 @@ class SectionHeading extends StatelessWidget {
             maxLines: 1,
             overflow: TextOverflow.ellipsis),
         if (showActionButotn)
-          TextButton(onPressed: onPressed, child: Text(buttonTitle))
+          TextButton(
+              onPressed: onPressed,
+              child: Row(
+                children: [
+                  Text(
+                    buttonTitle,
+                    style: Theme.of(context).textTheme.labelLarge,
+                  ),
+                  const Icon(
+                    Iconsax.arrow_right_34,
+                    color: TColors.black,
+                    size: 15,
+                  )
+                ],
+              ))
       ],
     );
   }

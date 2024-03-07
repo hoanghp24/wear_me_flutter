@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:wear_me_flutter/features/shop/screens/home/home.dart';
+import 'package:wear_me_flutter/features/shop/screens/store/store.dart';
 import 'package:wear_me_flutter/utils/constants/colors.dart';
 import 'package:wear_me_flutter/utils/constants/image_strings.dart';
 import 'package:wear_me_flutter/utils/helpers/helper_functions.dart';
@@ -54,7 +55,7 @@ class NavigationController extends GetxController {
 
   final screens = [
     const HomeScreen(),
-    const Text('Cửa hàng'),
+    const StoreScreen(),
     const Text('Yêu thích'),
     const Text('Hồ sơ'),
   ];

@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:wear_me_flutter/common/widgets/appbar/back_icon.dart';
+import 'package:wear_me_flutter/common/widgets/appbar/appbar.dart';
 import 'package:wear_me_flutter/common/widgets/authentications/confirm_email.dart';
-import 'package:wear_me_flutter/utils/constants/colors.dart';
 import 'package:wear_me_flutter/utils/constants/image_strings.dart';
 import 'package:wear_me_flutter/utils/constants/sizes.dart';
 import 'package:wear_me_flutter/utils/constants/text_strings.dart';
-import 'package:wear_me_flutter/utils/helpers/helper_functions.dart';
 
 class ForgetPassword extends StatelessWidget {
   ForgetPassword({super.key});
@@ -13,11 +11,9 @@ class ForgetPassword extends StatelessWidget {
   final _emailController = TextEditingController();
   @override
   Widget build(BuildContext context) {
-    final dark = HelperFunctions.isDarkMode(context);
-
     return Scaffold(
-      appBar: AppBar(
-        leading: BackIconAppBar(dark: dark),
+      appBar: TAppBar(
+        showBackArrow: true,
         title: Text(TTexts.retrievePassword,
             style: Theme.of(context).textTheme.headlineSmall),
       ),
@@ -57,13 +53,7 @@ class ForgetPassword extends StatelessWidget {
                             ConfirmEmailDialog(email: email),
                       );
                     },
-                    style: ElevatedButton.styleFrom(
-                        backgroundColor: TColors.primary),
-                    child: Text(TTexts.submit,
-                        style: Theme.of(context)
-                            .textTheme
-                            .titleMedium!
-                            .apply(color: Colors.white)))),
+                    child: const Text(TTexts.submit))),
           ],
         ),
       ),

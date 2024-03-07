@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
 import 'package:wear_me_flutter/features/authentication/controllers/onboarding/onboarding_controller.dart';
+import 'package:wear_me_flutter/utils/constants/colors.dart';
 import 'package:wear_me_flutter/utils/constants/sizes.dart';
 import 'package:wear_me_flutter/utils/constants/text_strings.dart';
 import 'package:wear_me_flutter/utils/device/device_utility.dart';
@@ -17,10 +18,8 @@ class OnBoardingNextButton extends StatelessWidget {
         left: TSizes.defaultSpace,
         right: TSizes.defaultSpace,
         child: ElevatedButton(
+          style: ElevatedButton.styleFrom(backgroundColor: TColors.white),
           onPressed: () => OnBoardingController.instance.nextPage(),
-          style: ElevatedButton.styleFrom(
-            backgroundColor: Colors.white,
-          ),
           child: Obx(
             () {
               int currentPage =
@@ -33,13 +32,8 @@ class OnBoardingNextButton extends StatelessWidget {
               } else if (currentPage == 2) {
                 buttonText = TTexts.onBoardingButton3;
               }
-              return Text(
-                buttonText,
-                style: Theme.of(context)
-                    .textTheme
-                    .bodyLarge!
-                    .apply(color: Colors.black),
-              );
+              return Text(buttonText,
+                  style: const TextStyle(color: TColors.black));
             },
           ),
         ));

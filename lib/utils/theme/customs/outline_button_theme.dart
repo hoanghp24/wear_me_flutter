@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wear_me_flutter/utils/constants/sizes.dart';
 
 class TOutlineButtonTheme {
   TOutlineButtonTheme._();
@@ -10,10 +11,10 @@ class TOutlineButtonTheme {
           foregroundColor: Colors.black,
           side: const BorderSide(color: Colors.blue),
           textStyle: const TextStyle(
-              fontSize: 16, color: Colors.black, fontWeight: FontWeight.w600),
-          padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 20),
-          shape:
-              RoundedRectangleBorder(borderRadius: BorderRadius.circular(14))));
+              fontSize: 18, color: Colors.black, fontWeight: FontWeight.w500),
+          padding: const EdgeInsets.symmetric(vertical: 23),
+          shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(TSizes.md))));
 
   // Dark Theme
   static final darkOutlineButtonTheme = OutlinedButtonThemeData(
@@ -22,8 +23,8 @@ class TOutlineButtonTheme {
           foregroundColor: Colors.white,
           side: const BorderSide(color: Colors.blueAccent),
           textStyle: const TextStyle(
-              fontSize: 16, color: Colors.white, fontWeight: FontWeight.w600),
-          padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 20),
-          shape:
-              RoundedRectangleBorder(borderRadius: BorderRadius.circular(14))));
+              fontSize: 18, color: Colors.white, fontWeight: FontWeight.w500),
+          padding: const EdgeInsets.symmetric(vertical: 23),
+          shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(TSizes.md))));
 }

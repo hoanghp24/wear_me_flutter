@@ -7,8 +7,8 @@ class Formatter {
         .format(date); // Customize the date format as needed
   }
 
-  static String formatCurrency(double amount) {
-    return NumberFormat.currency(locale: 'en_US', symbol: '\$')
+  static String formatCurrency(int amount) {
+    return NumberFormat.currency(locale: 'vi_VN', symbol: '₫')
         .format(amount); //Customize the currency locale and symbol as needed
   }
 
@@ -52,5 +52,13 @@ class Formatter {
       i = end;
     }
     return formattedNumber.toString();
+  }
+
+  static String formatNumberSale(int number) {
+    if (number >= 1000) {
+      return '${(number / 1000).toStringAsFixed(1)}k';
+    } else {
+      return number.toString();
+    }
   }
 }

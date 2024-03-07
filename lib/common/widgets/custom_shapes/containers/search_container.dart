@@ -8,7 +8,7 @@ class SearchContainer extends StatelessWidget {
   const SearchContainer({
     super.key,
     required this.text,
-    this.icon,
+    this.icon = Icons.search,
     this.showBackground = true,
     this.showBorder = true,
     this.onTap,
@@ -24,28 +24,24 @@ class SearchContainer extends StatelessWidget {
     final dark = HelperFunctions.isDarkMode(context);
     return GestureDetector(
       onTap: onTap,
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: TSizes.defaultSpace),
-        child: Container(
-          width: TDeviceUtils.getScreenWidth(context),
-          padding: const EdgeInsets.all(TSizes.sm),
-          decoration: BoxDecoration(
-              color: showBackground
-                  ? dark
-                      ? TColors.dark
-                      : TColors.light
-                  : Colors.transparent,
-              borderRadius: showBorder
-                  ? BorderRadius.circular(TSizes.cardRadiusLg)
-                  : null,
-              border: Border.all(color: TColors.grey)),
-          child: Row(
-            children: [
-              Icon(icon, color: TColors.darkerGrey),
-              const SizedBox(width: TSizes.spaceBtwItems),
-              Text(text, style: Theme.of(context).textTheme.bodySmall)
-            ],
-          ),
+      child: Container(
+        width: TDeviceUtils.getScreenWidth(context),
+        padding: const EdgeInsets.all(TSizes.sm + 2),
+        decoration: BoxDecoration(
+          color: showBackground
+              ? dark
+                  ? TColors.dark
+                  : TColors.grey.withOpacity(0.6)
+              : Colors.transparent,
+          borderRadius:
+              showBorder ? BorderRadius.circular(TSizes.md - 2) : null,
+        ),
+        child: Row(
+          children: [
+            Icon(icon, color: TColors.black),
+            const SizedBox(width: TSizes.spaceBtwItems),
+            Text(text, style: Theme.of(context).textTheme.bodySmall)
+          ],
         ),
       ),
     );

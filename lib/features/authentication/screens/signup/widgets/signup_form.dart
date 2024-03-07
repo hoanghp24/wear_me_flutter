@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:wear_me_flutter/common/widgets/authentications/confirm_email.dart';
 import 'package:wear_me_flutter/features/authentication/screens/signup/widgets/term_checkbox.dart';
-import 'package:wear_me_flutter/utils/constants/colors.dart';
 import 'package:wear_me_flutter/utils/constants/sizes.dart';
 import 'package:wear_me_flutter/utils/constants/text_strings.dart';
 
@@ -94,13 +93,7 @@ class SignUpForm extends StatelessWidget {
                         builder: (BuildContext context) =>
                             ConfirmEmailDialog(email: email));
                   },
-                  style: ElevatedButton.styleFrom(
-                      backgroundColor: TColors.primary),
-                  child: Text(TTexts.createAccount,
-                      style: Theme.of(context)
-                          .textTheme
-                          .bodyLarge!
-                          .apply(color: Colors.white)))),
+                  child: const Text(TTexts.createAccount))),
         ],
       ),
     );

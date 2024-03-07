@@ -17,6 +17,16 @@ class TImages {
   //Animations image
   static const String receivedMail = "assets/icons/received-mail.png";
 
-  //Categories image
-  static const String shirtIcons = "assets/icons/categories/shirt.png";
+  //Brands image
+  static const String iconGucci = "assets/icons/categories/iconGucci.png";
+
+  //Banners image
+  static const String banner1 = "assets/images/banners/banner1.jpg";
+  static const String banner2 = "assets/images/banners/banner2.jpg";
+  static const String banner3 = "assets/images/banners/banner3.jpg";
+
+  //Banners image
+  static const String product1 = "assets/images/products/product1.jpg";
+  static const String product2 = "assets/images/products/product2.jpg";
+  static const String product3 = "assets/images/products/product3.jpg";
 }
