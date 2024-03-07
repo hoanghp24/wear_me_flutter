@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:wear_me_flutter/common/widgets/brands/brand_card.dart';
 import 'package:wear_me_flutter/common/widgets/custom_shapes/containers/rounded_container.dart';
 import 'package:wear_me_flutter/utils/constants/colors.dart';
-import 'package:wear_me_flutter/utils/constants/image_strings.dart';
 import 'package:wear_me_flutter/utils/constants/sizes.dart';
 import 'package:wear_me_flutter/utils/helpers/helper_functions.dart';
 
