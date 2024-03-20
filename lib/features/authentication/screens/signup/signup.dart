@@ -12,9 +12,7 @@ class SignUpScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final dark = HelperFunctions.isDarkMode(context);
     return Scaffold(
-      appBar: const TAppBar(
-        showBackArrow: true,
-      ),
+      appBar: const TAppBar(showBackArrow: true),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(TSizes.defaultSpace),
@@ -22,7 +20,7 @@ class SignUpScreen extends StatelessWidget {
             children: [
               //Title
               Text(TTexts.signupTitle,
-                  style: Theme.of(context).textTheme.headlineLarge),
+                  style: Theme.of(context).textTheme.headlineMedium),
               const SizedBox(height: TSizes.sm),
               Text(TTexts.signupSubTitle,
                   style: Theme.of(context).textTheme.titleSmall),

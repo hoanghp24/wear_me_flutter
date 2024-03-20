@@ -4,6 +4,7 @@ import 'package:wear_me_flutter/features/authentication/controllers/onboarding/o
 import 'package:wear_me_flutter/features/authentication/screens/onboarding/widgets/onboarding_dot_navigation.dart';
 import 'package:wear_me_flutter/features/authentication/screens/onboarding/widgets/onboarding_next_button.dart';
 import 'package:wear_me_flutter/features/authentication/screens/onboarding/widgets/onboarding_page.dart';
+import 'package:wear_me_flutter/features/authentication/screens/onboarding/widgets/onboarding_skip_button.dart';
 import 'package:wear_me_flutter/utils/constants/colors.dart';
 import 'package:wear_me_flutter/utils/constants/image_strings.dart';
 import 'package:wear_me_flutter/utils/constants/text_strings.dart';
@@ -18,11 +19,8 @@ class OnBoardingScreeen extends StatelessWidget {
     return Scaffold(
       body: Stack(
         children: [
-          /// Gradient Background
           Container(
-            decoration: const BoxDecoration(
-              gradient: TColors.linearGradient,
-            ),
+            decoration: const BoxDecoration(gradient: TColors.linearGradient),
           ),
 
           /// Horizontal Scrollable Pages
@@ -47,6 +45,9 @@ class OnBoardingScreeen extends StatelessWidget {
               ),
             ],
           ),
+
+          ///Skip Button
+          const OnboardingSkipButton(),
 
           //Dot Navigation
           const OnBoardingDotNavigation(),

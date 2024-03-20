@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:wear_me_flutter/common/widgets/appbar/appbar.dart';
 import 'package:wear_me_flutter/common/widgets/authentications/confirm_email.dart';
-import 'package:wear_me_flutter/utils/constants/image_strings.dart';
 import 'package:wear_me_flutter/utils/constants/sizes.dart';
 import 'package:wear_me_flutter/utils/constants/text_strings.dart';
 
@@ -23,9 +22,6 @@ class ForgetPassword extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             ///Heading
-            const Center(
-                child: Image(height: 90, image: AssetImage(TImages.encrypted))),
-            const SizedBox(height: TSizes.spaceBtwItems),
             Text(TTexts.forgetPasswordTitle,
                 style: Theme.of(context).textTheme.headlineSmall),
             Text(TTexts.forgetPasswordSubtitle,

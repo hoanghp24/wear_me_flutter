@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
 import 'package:wear_me_flutter/features/authentication/controllers/onboarding/onboarding_controller.dart';
 import 'package:wear_me_flutter/utils/constants/colors.dart';
 import 'package:wear_me_flutter/utils/constants/sizes.dart';
-import 'package:wear_me_flutter/utils/constants/text_strings.dart';
 import 'package:wear_me_flutter/utils/device/device_utility.dart';
 
 class OnBoardingNextButton extends StatelessWidget {
@@ -15,26 +13,14 @@ class OnBoardingNextButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Positioned(
         bottom: TDeviceUtils.getBottomNavigationBarHeight(),
-        left: TSizes.defaultSpace,
         right: TSizes.defaultSpace,
         child: ElevatedButton(
-          style: ElevatedButton.styleFrom(backgroundColor: TColors.white),
+          style: ElevatedButton.styleFrom(
+              shape: const CircleBorder(), backgroundColor: TColors.white),
           onPressed: () => OnBoardingController.instance.nextPage(),
-          child: Obx(
-            () {
-              int currentPage =
-                  OnBoardingController.instance.currentPageIndex.value;
-              String buttonText = '';
-              if (currentPage == 0) {
-                buttonText = TTexts.onBoardingButton1;
-              } else if (currentPage == 1) {
-                buttonText = TTexts.onBoardingButton2;
-              } else if (currentPage == 2) {
-                buttonText = TTexts.onBoardingButton3;
-              }
-              return Text(buttonText,
-                  style: const TextStyle(color: TColors.black));
-            },
+          child: const Icon(
+            Icons.arrow_forward,
+            color: TColors.black,
           ),
         ));
   }

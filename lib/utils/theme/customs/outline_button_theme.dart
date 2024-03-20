@@ -11,10 +11,10 @@ class TOutlineButtonTheme {
           foregroundColor: Colors.black,
           side: const BorderSide(color: Colors.blue),
           textStyle: const TextStyle(
-              fontSize: 18, color: Colors.black, fontWeight: FontWeight.w500),
-          padding: const EdgeInsets.symmetric(vertical: 23),
+              fontSize: 17, color: Colors.black, fontWeight: FontWeight.w500),
+          padding: const EdgeInsets.symmetric(vertical: 21),
           shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(TSizes.md))));
+              borderRadius: BorderRadius.circular(TSizes.sm))));
 
   // Dark Theme
   static final darkOutlineButtonTheme = OutlinedButtonThemeData(
@@ -23,8 +23,8 @@ class TOutlineButtonTheme {
           foregroundColor: Colors.white,
           side: const BorderSide(color: Colors.blueAccent),
           textStyle: const TextStyle(
-              fontSize: 18, color: Colors.white, fontWeight: FontWeight.w500),
-          padding: const EdgeInsets.symmetric(vertical: 23),
+              fontSize: 17, color: Colors.white, fontWeight: FontWeight.w500),
+          padding: const EdgeInsets.symmetric(vertical: 21),
           shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(TSizes.md))));
+              borderRadius: BorderRadius.circular(TSizes.sm))));
 }

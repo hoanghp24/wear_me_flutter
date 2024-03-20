@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wear_me_flutter/utils/constants/colors.dart';
 import 'package:wear_me_flutter/utils/constants/sizes.dart';
 import 'package:wear_me_flutter/utils/helpers/helper_functions.dart';
 
@@ -27,7 +28,7 @@ class OnBoardingPage extends StatelessWidget {
             style: Theme.of(context)
                 .textTheme
                 .headlineMedium!
-                .apply(color: Colors.white),
+                .apply(color: TColors.white),
             textAlign: TextAlign.center,
           ),
           const SizedBox(height: TSizes.spaceBtwItems),
@@ -36,7 +37,7 @@ class OnBoardingPage extends StatelessWidget {
             style: Theme.of(context)
                 .textTheme
                 .bodyMedium!
-                .apply(color: Colors.white),
+                .apply(color: TColors.white),
             textAlign: TextAlign.center,
           ),
         ],
