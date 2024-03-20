@@ -24,7 +24,7 @@ class PromoSlider extends StatelessWidget {
             options: CarouselOptions(
               autoPlay: true,
               aspectRatio: 2.0,
-              viewportFraction: 1,
+              enlargeCenterPage: true,
               onPageChanged: (index, _) =>
                   controller.updatePageIndicator(index),
             ),
@@ -43,7 +43,7 @@ class PromoSlider extends StatelessWidget {
                 CircularContainer(
                   width: 20,
                   height: 4,
-                  margin: const EdgeInsets.only(right: 10),
+                  margin: const EdgeInsets.only(right: 10, bottom: 15),
                   backgroundColor: controller.carouselCurrentIndex.value == i
                       ? TColors.primary
                       : TColors.grey,

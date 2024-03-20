@@ -15,11 +15,11 @@ class LoginHeader extends StatelessWidget {
         const SizedBox(height: TSizes.lg),
         Text(
           TTexts.loginTitle,
-          style: Theme.of(context).textTheme.headlineLarge,
+          style: Theme.of(context).textTheme.headlineMedium,
         ),
         const SizedBox(height: TSizes.sm),
         Text(TTexts.loginSubTitle,
-            style: Theme.of(context).textTheme.titleSmall),
+            style: Theme.of(context).textTheme.bodyMedium),
       ],
     );
   }

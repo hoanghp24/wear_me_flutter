@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:wear_me_flutter/features/authentication/screens/signup/signup.dart';
+import 'package:wear_me_flutter/utils/constants/colors.dart';
 import 'package:wear_me_flutter/utils/constants/sizes.dart';
 import 'package:wear_me_flutter/utils/constants/text_strings.dart';
 import 'package:wear_me_flutter/utils/device/device_utility.dart';
@@ -34,9 +35,9 @@ class LoginFooter extends StatelessWidget {
                     duration: const Duration(milliseconds: 300),
                   ),
               child: Text(TTexts.createAccount,
-                  style: Theme.of(context).textTheme.bodyLarge!.apply(
-                        color: dark ? Colors.white : Colors.black,
-                      ))),
+                  style: Theme.of(context).textTheme.bodyMedium!.apply(
+                      color: dark ? Colors.white : TColors.primary,
+                      decorationColor: dark ? Colors.white : TColors.primary))),
         ],
       ),
     );

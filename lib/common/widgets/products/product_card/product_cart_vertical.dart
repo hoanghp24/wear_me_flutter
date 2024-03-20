@@ -1,32 +1,41 @@
 import 'package:flutter/material.dart';
-import 'package:iconsax/iconsax.dart';
-import 'package:wear_me_flutter/common/styles/shadows.dart';
+import 'package:get/get.dart';
 import 'package:wear_me_flutter/common/widgets/custom_shapes/containers/rounded_container.dart';
-import 'package:wear_me_flutter/common/widgets/icons/circular_icon.dart';
 import 'package:wear_me_flutter/common/widgets/images/rounded_image.dart';
+import 'package:wear_me_flutter/common/widgets/products/flash_sale/sale_tag.dart';
+import 'package:wear_me_flutter/common/widgets/texts/product_price_text.dart';
 import 'package:wear_me_flutter/common/widgets/texts/product_text_title.dart';
-import 'package:wear_me_flutter/features/shop/screens/home/widgets/sale_count.dart';
-import 'package:wear_me_flutter/features/shop/screens/home/widgets/sale_price.dart';
+import 'package:wear_me_flutter/features/shop/screens/home/widgets/sale_rating_count.dart';
+import 'package:wear_me_flutter/features/shop/screens/product_detail/product_detail.dart';
 import 'package:wear_me_flutter/utils/constants/colors.dart';
-import 'package:wear_me_flutter/utils/constants/image_strings.dart';
 import 'package:wear_me_flutter/utils/constants/sizes.dart';
 import 'package:wear_me_flutter/utils/helpers/helper_functions.dart';
 
 class ProductCardVertical extends StatelessWidget {
-  const ProductCardVertical({super.key});
+  const ProductCardVertical(
+      {super.key,
+      required this.title,
+      required this.vote,
+      required this.saleNumber,
+      required this.price,
+      required this.image});
+
+  final String title, image;
+  final double vote;
+  final int saleNumber, price;
 
   @override
   Widget build(BuildContext context) {
     final dark = HelperFunctions.isDarkMode(context);
     return GestureDetector(
-      onTap: () {},
+      onTap: () => Get.to(() => const ProductDetailScreen()),
       child: Container(
         width: 180,
         decoration: BoxDecoration(
-            boxShadow: [ShadowStyle.verticalProductShadow],
-            borderRadius: BorderRadius.circular(TSizes.productimageRadius),
-            color: dark ? TColors.darkerGrey : TColors.white),
-        child: const Column(
+            borderRadius: BorderRadius.circular(TSizes.sm),
+            color: dark ? TColors.darkerGrey : TColors.white,
+            border: Border.all(color: Colors.grey.shade300, width: 1)),
+        child: Column(
           children: [
             ///Thumbnail, Wishlist, Discount
             RoundedContainer(
@@ -34,31 +43,50 @@ class ProductCardVertical extends StatelessWidget {
               child: Stack(children: [
                 ///Thumbnail
                 RoundedImage(
-                    imageUrl: TImages.product1, applyImageRadius: true),
-
-                /// Favorite Icon
+                  backgroundColor: TColors.white,
+                  imageUrl: image,
+                  fit: BoxFit.contain,
+                  borderRadius: TSizes.sm,
+                ),
                 Positioned(
-                    right: 5,
-                    top: 5,
-                    child:
-                        CircularIcon(icon: Iconsax.heart5, color: Colors.red))
+                  top: 5,
+                  right: 5,
+                  child: IconButton(
+                      onPressed: () {},
+                      icon: const Icon(
+                        Icons.favorite_outline,
+                        color: TColors.darkGrey,
+                      )),
+                )
               ]),
             ),
-            SizedBox(height: TSizes.xs / 2),
+            const SizedBox(height: TSizes.xs / 2),
 
             /// Details
             Padding(
-              padding: EdgeInsets.only(left: TSizes.md),
+              padding: const EdgeInsets.only(left: TSizes.md),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  ProductTextTitle(
-                      title: 'Áo polo nam ngắn tay có cổ Vicenzo',
-                      smallSize: true),
-                  SizedBox(height: TSizes.xs / 2),
-                  SalePrice(price: 75000),
-                  SizedBox(height: TSizes.xs / 2),
-                  SaleCounted(saleCount: 2300, vote: 4.5),
+                  ProductTextTitle(title: title, smallSize: true),
+                  const SizedBox(height: TSizes.xs / 2),
+                  SaleRatingCounted(
+                      vote: vote,
+                      style: Theme.of(context)
+                          .textTheme
+                          .labelMedium!
+                          .apply(color: TColors.black)),
+                  const SizedBox(height: TSizes.xs / 2),
+                  Row(
+                    children: [
+                      ProductPriceText(
+                        price: price,
+                        isMedium: true,
+                      ),
+                      const SizedBox(width: TSizes.spaceBtwItems),
+                      SaleTag(saleNumber: saleNumber),
+                    ],
+                  ),
                 ],
               ),
             )

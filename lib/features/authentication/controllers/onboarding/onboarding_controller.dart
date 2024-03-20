@@ -21,11 +21,7 @@ class OnBoardingController extends GetxController {
   /// Update Current Index & jump to next page
   void nextPage() {
     if (currentPageIndex.value == 2) {
-      Get.to(
-        () => const LoginScreen(),
-        transition: Transition.fadeIn,
-        duration: const Duration(milliseconds: 1000),
-      );
+      Get.to(const LoginScreen());
     } else {
       int page = currentPageIndex.value + 1;
       pageController.animateToPage(
@@ -34,5 +30,10 @@ class OnBoardingController extends GetxController {
         curve: Curves.easeInOut,
       );
     }
+  }
+
+  void skipPage() {
+    currentPageIndex.value = 2;
+    pageController.jumpToPage(2);
   }
 }

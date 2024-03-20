@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:iconsax/iconsax.dart';
 import 'package:wear_me_flutter/utils/constants/colors.dart';
 
 class SectionHeading extends StatelessWidget {
   const SectionHeading({
     super.key,
     this.textColor = TColors.black,
-    this.showActionButotn = true,
+    this.showActionButton = true,
     required this.title,
     this.buttonTitle = 'Xem thêm',
     this.onPressed,
+    this.showBackIcon = false,
   });
 
   final Color? textColor;
-  final bool showActionButotn;
+  final bool showActionButton, showBackIcon;
   final String title, buttonTitle;
   final void Function()? onPressed;
 
@@ -23,28 +23,23 @@ class SectionHeading extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Text(title,
-            style: Theme.of(context)
-                .textTheme
-                .headlineSmall!
-                .apply(color: textColor),
+            style: TextStyle(
+                fontSize: 16, fontWeight: FontWeight.w500, color: textColor),
             maxLines: 1,
             overflow: TextOverflow.ellipsis),
-        if (showActionButotn)
-          TextButton(
-              onPressed: onPressed,
-              child: Row(
-                children: [
-                  Text(
+        if (showActionButton)
+          showBackIcon
+              ? const Icon(Icons.arrow_forward_ios,
+                  color: TColors.darkGrey, size: 18)
+              : TextButton(
+                  onPressed: onPressed,
+                  child: Text(
                     buttonTitle,
-                    style: Theme.of(context).textTheme.labelLarge,
-                  ),
-                  const Icon(
-                    Iconsax.arrow_right_34,
-                    color: TColors.black,
-                    size: 15,
-                  )
-                ],
-              ))
+                    style: Theme.of(context)
+                        .textTheme
+                        .bodyMedium!
+                        .apply(color: TColors.primary),
+                  ))
       ],
     );
   }

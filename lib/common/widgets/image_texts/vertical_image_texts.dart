@@ -8,8 +8,8 @@ class VerticalImageText extends StatelessWidget {
     super.key,
     required this.image,
     required this.title,
-    this.textColor = TColors.white,
-    this.backgroundColor = TColors.white,
+    this.textColor = TColors.black,
+    this.backgroundColor,
     this.onTap,
   });
 
@@ -29,9 +29,11 @@ class VerticalImageText extends StatelessWidget {
             ///Circular icon
             children: [
               RoundedImage(
-                height: 50,
+                height: 60,
+                width: 60,
+                backgroundColor: TColors.grey.withOpacity(0.5),
                 imageUrl: image,
-                fit: BoxFit.fill,
+                fit: BoxFit.contain,
               ),
 
               ///Text
@@ -39,10 +41,11 @@ class VerticalImageText extends StatelessWidget {
               SizedBox(
                 width: 55,
                 child: Text(title,
-                    style: Theme.of(context)
-                        .textTheme
-                        .labelMedium!
-                        .apply(color: textColor),
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                        fontSize: 13,
+                        fontWeight: FontWeight.w500,
+                        color: textColor),
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis),
               )

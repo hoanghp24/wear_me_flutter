@@ -11,12 +11,13 @@ class SearchContainer extends StatelessWidget {
     this.icon = Icons.search,
     this.showBackground = true,
     this.showBorder = true,
+    this.showBorderSide = false,
     this.onTap,
   });
 
   final String text;
   final IconData? icon;
-  final bool showBackground, showBorder;
+  final bool showBackground, showBorder, showBorderSide;
   final VoidCallback? onTap;
 
   @override
@@ -26,21 +27,22 @@ class SearchContainer extends StatelessWidget {
       onTap: onTap,
       child: Container(
         width: TDeviceUtils.getScreenWidth(context),
-        padding: const EdgeInsets.all(TSizes.sm + 2),
+        padding: const EdgeInsets.all(TSizes.sm),
         decoration: BoxDecoration(
-          color: showBackground
-              ? dark
-                  ? TColors.dark
-                  : TColors.grey.withOpacity(0.6)
-              : Colors.transparent,
-          borderRadius:
-              showBorder ? BorderRadius.circular(TSizes.md - 2) : null,
-        ),
+            color: showBackground
+                ? dark
+                    ? TColors.dark
+                    : TColors.grey.withOpacity(0.6)
+                : Colors.transparent,
+            borderRadius: showBorder ? BorderRadius.circular(TSizes.sm) : null,
+            border: showBorderSide ? Border.all(color: TColors.grey) : null),
         child: Row(
           children: [
-            Icon(icon, color: TColors.black),
-            const SizedBox(width: TSizes.spaceBtwItems),
-            Text(text, style: Theme.of(context).textTheme.bodySmall)
+            const SizedBox(width: TSizes.sm),
+            Icon(icon, color: TColors.darkGrey),
+            const SizedBox(width: TSizes.sm),
+            Expanded(
+                child: Text(text, style: Theme.of(context).textTheme.bodySmall))
           ],
         ),
       ),

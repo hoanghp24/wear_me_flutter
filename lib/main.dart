@@ -10,7 +10,7 @@ void main() => runApp(
         builder: (context) => const App(),
       ),
     );
-
+  
 //Enable this function when running on an emulator or real device
 // void main() {
 //   runApp(const App());

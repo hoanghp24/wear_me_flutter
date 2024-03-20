@@ -3,14 +3,14 @@ import 'package:wear_me_flutter/utils/constants/colors.dart';
 
 class ShadowStyle {
   static final verticalProductShadow = BoxShadow(
-      color: TColors.darkGrey.withOpacity(0.1),
-      blurRadius: 50,
-      spreadRadius: 7,
-      offset: const Offset(0, 2));
+    color: TColors.black.withOpacity(0.1),
+    blurRadius: 1,
+    spreadRadius: 1,
+  );
 
   static final horizontalProductShadow = BoxShadow(
-      color: TColors.darkGrey.withOpacity(0.1),
-      blurRadius: 50,
-      spreadRadius: 7,
-      offset: const Offset(0, 2));
+    color: TColors.black.withOpacity(0.1),
+    blurRadius: 1,
+    spreadRadius: 1,
+  );
 }

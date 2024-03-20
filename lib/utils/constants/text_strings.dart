@@ -47,6 +47,8 @@ class TTexts {
   static const String resendEmailIn = "Resend email in";
   static const String signInGoogle = "Đăng nhập với Google";
   static const String signUpGoogle = "Đăng ký với Google";
+  static const String addCart = "Thêm vào giỏ";
+  static const String buyNow = "Mua ngay";
 
   // Authentication Heading Texts
 
